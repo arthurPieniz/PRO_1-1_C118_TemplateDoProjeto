@@ -43,8 +43,10 @@ def save():
     data_entry = date + "," + product + "," + review + "," + sentiment
 
     # abra o arquivo no modo 'append'
+    f = open('./static/assets/datafiles/data_entry.csv' , 'a')
 
     # Registre os dados no arquivo
+    f.write(data_entry + '\n')
 
     # retorne uma mensagem de sucesso
     return jsonify({'status' : 'success' , 

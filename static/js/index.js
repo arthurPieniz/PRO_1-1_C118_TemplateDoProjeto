@@ -7,7 +7,7 @@ $(document).ready(function(){
     let current_date = date.toDateString()
 
     //  exibir a data na página HTML usando JQUERY e JS
-    $('').text('Data: ' + current_date)
+    $('#date').text('Data: ' + current_date)
 
     
     let review = ""
@@ -22,7 +22,7 @@ $(document).ready(function(){
         $.ajax({
 
             // tipo da requisição
-            type : '',
+            type : 'POST',
 
             // url
             url : api_url,
@@ -138,8 +138,8 @@ $(document).ready(function(){
 
         //  chamada ajax
         $.ajax({
-            type : '',
-            url : '',
+            type : 'POST',
+            url : '/save',
             data : JSON.stringify(input_data),
             dataType : 'json',
             contentType : 'application/json',
